@@ -1,0 +1,1917 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - dcczc@localhost" uuid="62d283e1-e914-4137-90c9-172bda35ddf2">
+    <database-info product="MySQL" version="5.6.26" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.2">
+      <schema id="1" name="dcczc"/>
+      <table id="2" parent="1" name="app_version"/>
+      <table id="3" parent="1" name="financing_project"/>
+      <table id="4" parent="1" name="geo_city"/>
+      <table id="5" parent="1" name="geo_district"/>
+      <table id="6" parent="1" name="geo_province"/>
+      <table id="7" parent="1" name="log_login"/>
+      <table id="8" parent="1" name="news_notice"/>
+      <table id="9" parent="1" name="news_notice_type"/>
+      <table id="10" parent="1" name="order_status"/>
+      <table id="11" parent="1" name="pay_status"/>
+      <table id="12" parent="1" name="product_project"/>
+      <table id="13" parent="1" name="product_project_expand"/>
+      <table id="14" parent="1" name="product_project_progress"/>
+      <table id="15" parent="1" name="product_project_status"/>
+      <table id="16" parent="1" name="product_project_type"/>
+      <table id="17" parent="1" name="product_return"/>
+      <table id="18" parent="1" name="product_sourse"/>
+      <table id="19" parent="1" name="project_audit"/>
+      <table id="20" parent="1" name="project_evaluate"/>
+      <table id="21" parent="1" name="project_recommend"/>
+      <table id="22" parent="1" name="project_support_order"/>
+      <table id="23" parent="1" name="remit_trans_req_msg"/>
+      <table id="24" parent="1" name="roll_image"/>
+      <table id="25" parent="1" name="send_sms_record"/>
+      <table id="26" parent="1" name="status"/>
+      <table id="27" parent="1" name="status_type"/>
+      <table id="28" parent="1" name="sys_config"/>
+      <table id="29" parent="1" name="sys_function"/>
+      <table id="30" parent="1" name="sys_log"/>
+      <table id="31" parent="1" name="sys_org"/>
+      <table id="32" parent="1" name="sys_role"/>
+      <table id="33" parent="1" name="sys_role_function"/>
+      <table id="34" parent="1" name="sys_role_type"/>
+      <table id="35" parent="1" name="sys_system"/>
+      <table id="36" parent="1" name="sys_user"/>
+      <table id="37" parent="1" name="sys_user_role"/>
+      <table id="38" parent="1" name="trading_order"/>
+      <table id="39" parent="1" name="user"/>
+      <table id="40" parent="1" name="user_addr"/>
+      <table id="41" parent="1" name="user_card"/>
+      <table id="42" parent="1" name="user_card_type"/>
+      <table id="43" parent="1" name="user_concern_project"/>
+      <table id="44" parent="1" name="user_private_message"/>
+      <table id="45" parent="1" name="user_real_name_info"/>
+      <column id="46" parent="2" name="a_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="47" parent="2" name="a_version">
+        <comment>app 版本</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="48" parent="2" name="a_system_type">
+        <comment>手机系统类型（0安卓，1IOS）</comment>
+        <data-type>int(1)</data-type>
+      </column>
+      <column id="49" parent="2" name="a_download_url">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="50" parent="2" name="update_time">
+        <data-type>datetime</data-type>
+      </column>
+      <key id="51" parent="2" name="PRIMARY">
+        <columns>a_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="52" parent="3" name="PROJECT_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="53" parent="3" name="PROJECT_NAME">
+        <comment>项目名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="54" parent="3" name="USER_ID">
+        <comment>项目类别</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="55" parent="3" name="PROJECT_INTRODUCE">
+        <comment>项目状态</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="56" parent="3" name="PROJECT_DETAIL">
+        <comment>项目详情(富文本框)</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="57" parent="3" name="PROJECT_PHASE">
+        <comment>项目所属阶段</comment>
+        <data-type>int(1)</data-type>
+      </column>
+      <column id="58" parent="3" name="PROJECT_TYPE_ID">
+        <comment>项目类别</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="59" parent="3" name="PROJECT_STATUS_ID">
+        <comment>项目状态</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="60" parent="3" name="Enterprise_CreateTime">
+        <comment>企业创建时间</comment>
+        <data-type>date</data-type>
+      </column>
+      <column id="61" parent="3" name="Enterprise_person_count">
+        <comment>企业人数</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="62" parent="3" name="Enterprise_cityId">
+        <comment>企业所在城市ID</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="63" parent="3" name="financing_amount">
+        <comment>融资金额（单位为元）</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="64" parent="3" name="share_stock">
+        <comment>出让股份（0-100之间）</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="65" parent="3" name="CoverImage">
+        <comment>项目封面图片展示</comment>
+        <data-type>varchar(256)</data-type>
+      </column>
+      <column id="66" parent="3" name="lead_invest_money">
+        <comment>领投金额</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="67" parent="3" name="follow_invest_money">
+        <comment>跟投金额</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="68" parent="3" name="collect_money_data">
+        <comment>集资时间（单位为月）</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="69" parent="3" name="lowest_lead_invert_money">
+        <comment>最低领投金额</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="70" parent="3" name="lowest_follow_invest_money">
+        <comment>最低跟投金额</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="71" parent="3" name="pay_method">
+        <comment>投资款付款方式</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="72" parent="3" name="lead_invest_person_id">
+        <comment>领投人</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="73" parent="3" name="high_invert_money">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="74" parent="3" name="GEO_CITY_ID">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="75" parent="3" name="create_time">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="76" parent="3" name="end_date">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="77" parent="3" name="collect_count">
+        <comment>收藏次数</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="78" parent="3" name="follow_invest_count">
+        <comment>跟投次数</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="79" parent="3" name="last_invest_time">
+        <comment>最新跟投时间</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="80" parent="3" name="video_url">
+        <data-type>varchar(512)</data-type>
+      </column>
+      <column id="81" parent="3" name="status">
+        <comment>0-审核中,1-审核未通过,2-项目编写中,3-审核通过,4-逻辑删除</comment>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;2&apos;</default-expression>
+      </column>
+      <column id="82" parent="3" name="IS_ENABLED">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="83" parent="3" name="IS_DELETE">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="84" parent="3" name="audit_desc">
+        <comment>审核描述</comment>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&quot;&quot;&apos;</default-expression>
+      </column>
+      <column id="85" parent="3" name="SEQ">
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="86" parent="3" name="PRIMARY">
+        <columns>PROJECT_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="87" parent="4" name="CITY_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="88" parent="4" name="PROVINCE_ID">
+        <comment>省份ID</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="89" parent="4" name="CITY_NAME">
+        <comment>名称</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="90" parent="4" name="CITY_CODE">
+        <comment>编码</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="91" parent="4" name="CITY_PINYIN">
+        <comment>拼音</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="92" parent="4" name="CITY_ZIPCODE">
+        <comment>邮编</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="93" parent="4" name="CITY_DESC">
+        <comment>描述</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="94" parent="4" name="IS_ENABLED">
+        <comment>是否启用(Y:启用;Nt停用)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="95" parent="4" name="SEQ">
+        <comment>排序</comment>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <key id="96" parent="4" name="PRIMARY">
+        <columns>CITY_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="97" parent="5" name="DISTRICT_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="98" parent="5" name="CITY_ID">
+        <comment>城市ID</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="99" parent="5" name="DISTRICT_NAME">
+        <comment>名称</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="100" parent="5" name="DISTRICT_CODE">
+        <comment>编码</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="101" parent="5" name="DISTRICT_PINYIN">
+        <comment>拼音</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="102" parent="5" name="DISTRICT_DESC">
+        <comment>描述</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="103" parent="5" name="IS_ENABLED">
+        <comment>是否启用(Y:启用;Nt停用)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="104" parent="5" name="SEQ">
+        <comment>排序</comment>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <key id="105" parent="5" name="PRIMARY">
+        <columns>DISTRICT_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="106" parent="6" name="PROVINCE_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="107" parent="6" name="PROVINCE_NAME">
+        <comment>名称</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="108" parent="6" name="PROVINCE_PINYIN">
+        <comment>拼音</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="109" parent="6" name="PROVINCE_CODE">
+        <comment>CODE</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="110" parent="6" name="PROVINCE_DESC">
+        <comment>备注</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="111" parent="6" name="IS_ENABLED">
+        <comment>是否启用(Y:启用;Nt停用)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="112" parent="6" name="SEQ">
+        <comment>排序</comment>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <key id="113" parent="6" name="PRIMARY">
+        <columns>PROVINCE_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="114" parent="7" name="LOG_LOGIN_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="115" parent="7" name="USER_ID">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="116" parent="7" name="LOGIN_IP">
+        <comment>登录IP</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="117" parent="7" name="LOGIN_EQUIPMENT">
+        <comment>登录设备</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="118" parent="7" name="LOGIN_TIME">
+        <comment>登录时间</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="119" parent="7" name="PRIMARY">
+        <columns>LOG_LOGIN_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="120" parent="8" name="NEWS_NOTICE_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="121" parent="8" name="NEWS_NOTICE_TYPE_ID">
+        <comment>类型ID</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="122" parent="8" name="NEWS_NOTICE_TITLE">
+        <comment>主标题</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="123" parent="8" name="NEWS_NOTICE_SUBHEAD">
+        <comment>副标题</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="124" parent="8" name="NEWS_NOTICE_IMG_URL">
+        <comment>列表图片</comment>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="125" parent="8" name="NEWS_NOTICE_CONTENT">
+        <comment>内容(富文本框)</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="126" parent="8" name="NEWS_NOTICE_REMARK">
+        <comment>备注</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="127" parent="8" name="CREATE_USER">
+        <comment>创建人</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="128" parent="8" name="START_TIME">
+        <comment>开始时间</comment>
+        <data-type>date</data-type>
+      </column>
+      <column id="129" parent="8" name="END_TIME">
+        <comment>结束时间</comment>
+        <data-type>date</data-type>
+      </column>
+      <column id="130" parent="8" name="CREATE_TIME">
+        <comment>创建时间</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="131" parent="8" name="PRIMARY">
+        <columns>NEWS_NOTICE_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="132" parent="9" name="NEWS_NOTICE_TYPE_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="133" parent="9" name="NEWS_NOTICE_TYPE_CODE">
+        <comment>编码</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="134" parent="9" name="NEWS_NOTICE_TYPE_NAME">
+        <comment>名称</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="135" parent="9" name="NEWS_NOTICE_TYPE_VALUE">
+        <comment>参数</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="136" parent="9" name="NEWS_NOTICE_TYPE_DESC">
+        <comment>描述</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="137" parent="9" name="IS_ENABLED">
+        <comment>是否启用</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="138" parent="9" name="SEQ">
+        <comment>排序</comment>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <key id="139" parent="9" name="PRIMARY">
+        <columns>NEWS_NOTICE_TYPE_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="140" parent="10" name="ORDER_STATUS_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="141" parent="10" name="ORDER_STATUS_CODE">
+        <comment>编码</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="142" parent="10" name="ORDER_STATUS_NAME">
+        <comment>名称</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="143" parent="10" name="ORDER_STATUS_VALUE">
+        <comment>参数</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="144" parent="10" name="ORDER_STATUS_DESC">
+        <comment>描述</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="145" parent="10" name="IS_ENABLED">
+        <comment>是否启用</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="146" parent="10" name="SEQ">
+        <comment>排序</comment>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <key id="147" parent="10" name="PRIMARY">
+        <columns>ORDER_STATUS_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="148" parent="11" name="PAY_STATUS_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="149" parent="11" name="PAY_STATUS_CODE">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="150" parent="11" name="PAY_STATUS_NAME">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="151" parent="11" name="PAT_STATUS_DESC">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="152" parent="11" name="IS_ENABLED">
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="153" parent="11" name="SEQ">
+        <data-type>bigint(20)</data-type>
+      </column>
+      <key id="154" parent="11" name="PRIMARY">
+        <columns>PAY_STATUS_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="155" parent="12" name="PROJECT_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="156" parent="12" name="PROJECT_CODE">
+        <comment>项目编码</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="157" parent="12" name="PROJECT_NAME">
+        <comment>项目名称</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="158" parent="12" name="USER_ID">
+        <comment>创建用户ID</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="159" parent="12" name="PROJECT_INTRODUCE">
+        <comment>项目简介（不超过100个字）</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="160" parent="12" name="PROJECT_DETAIL">
+        <comment>项目详情(富文本框)</comment>
+        <data-type>text</data-type>
+      </column>
+      <column id="161" parent="12" name="PROJECT_TYPE_ID">
+        <comment>项目类别</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="162" parent="12" name="PROJECT_STATUS_ID">
+        <comment>项目状态</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="163" parent="12" name="FINANCING_AMOUNT">
+        <comment>筹资金额（单位为元）</comment>
+        <data-type>double(20,2)</data-type>
+      </column>
+      <column id="164" parent="12" name="FINANCING_UPPER_LIMIT">
+        <comment>筹资上限，不少于100，0为无上限</comment>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="165" parent="12" name="GEO_CITY_ID">
+        <comment>所在城市ID</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="166" parent="12" name="PROJECT_VIDEO_URL">
+        <comment>项目视频URL</comment>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="167" parent="12" name="COVER_IMAGE_URL">
+        <comment>封面图片</comment>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="168" parent="12" name="PROJECT_IMAGE_URL">
+        <comment>项目图片</comment>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="169" parent="12" name="MOBILE_IMAGE_URL">
+        <comment>移动端图片</comment>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="170" parent="12" name="PROJECT_REMARK">
+        <comment>备注</comment>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="171" parent="12" name="COLLECT_DAY_QTY">
+        <comment>集资天数</comment>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="172" parent="12" name="START_DATE">
+        <comment>开始日期这个时间之前项目状态为预热中）</comment>
+        <data-type>date</data-type>
+      </column>
+      <column id="173" parent="12" name="END_DATE">
+        <comment>结束日期</comment>
+        <data-type>date</data-type>
+      </column>
+      <column id="174" parent="12" name="IS_ENABLED">
+        <comment>是否启用(Y:启用;Nt停用)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="175" parent="12" name="IS_DELETE">
+        <comment>是否删除（Y：已删除；N:没有删除）</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="176" parent="12" name="SEQ">
+        <comment>排序</comment>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="177" parent="12" name="CREATE_TIME">
+        <comment>创建时间</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="178" parent="12" name="PRIMARY">
+        <columns>PROJECT_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="179" parent="13" name="PRODUCT_PROJECT_EXPAND_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="180" parent="13" name="PRODUCT_ID">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="181" parent="13" name="SUPPORT_NUM">
+        <comment>支持数量</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="182" parent="13" name="SUPPORT_AMOUNT">
+        <comment>支持的金额</comment>
+        <data-type>double(20,2)</data-type>
+        <default-expression>&apos;0.00&apos;</default-expression>
+      </column>
+      <column id="183" parent="13" name="CONCERN_NUM">
+        <comment>关注数量</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="184" parent="13" name="EVALUATE_NUM">
+        <comment>评论数量</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="185" parent="13" name="CHECK_NUM">
+        <comment>点击观看数量</comment>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="186" parent="13" name="VERSION">
+        <comment>记录版本</comment>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <key id="187" parent="13" name="PRIMARY">
+        <columns>PRODUCT_PROJECT_EXPAND_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="188" parent="14" name="PRODUCT_PROJECT_PROGRESS_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="189" parent="14" name="PROJECT_ID">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="190" parent="14" name="CREATE_USER_ID">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="191" parent="14" name="CONTENT">
+        <data-type>varchar(2000)</data-type>
+      </column>
+      <column id="192" parent="14" name="PROGRESS_DATE">
+        <data-type>date</data-type>
+      </column>
+      <column id="193" parent="14" name="CREATE_TIME">
+        <data-type>datetime</data-type>
+      </column>
+      <key id="194" parent="14" name="PRIMARY">
+        <columns>PRODUCT_PROJECT_PROGRESS_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="195" parent="15" name="PROJECT_STATUS_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="196" parent="15" name="PROJECT_STATUS_CODE">
+        <comment>编码</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="197" parent="15" name="PROJECT_STATUS_NAME">
+        <comment>名称</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="198" parent="15" name="PROJECT_STATUS_VALUE">
+        <comment>值</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="199" parent="15" name="PROJECT_STATUS_DESC">
+        <comment>描述</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="200" parent="15" name="SEQ">
+        <comment>排序</comment>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="201" parent="15" name="IS_ENABLED">
+        <comment>是否启用(Y:启用;Nt停用)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="202" parent="15" name="IS_SHOW">
+        <comment>是否显示，是否展现给用户</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="203" parent="15" name="IS_AUDIT">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <key id="204" parent="15" name="PRIMARY">
+        <columns>PROJECT_STATUS_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="205" parent="16" name="PROJECT_TYPE_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="206" parent="16" name="PROJECT_TYPE_CODE">
+        <comment>类型编码</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="207" parent="16" name="PROJECT_TYPE_NAME">
+        <comment>类型名称</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="208" parent="16" name="PROJECT_TYPE_VALUE">
+        <comment>类型值</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="209" parent="16" name="PROJECT_TYPE_DESC">
+        <comment>类型描述</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="210" parent="16" name="SEQ">
+        <comment>排序</comment>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="211" parent="16" name="IS_ENABLED">
+        <comment>是否启用</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <key id="212" parent="16" name="PRIMARY">
+        <columns>PROJECT_TYPE_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="213" parent="17" name="PRODUCT_RETURN_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="214" parent="17" name="PRODUCT_RETURN_CODE">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="215" parent="17" name="PRODUCT_RETURN_TYPE">
+        <comment>项目回报类型（实物；虚拟产品）</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="216" parent="17" name="PRODUCT_RETURN_CONTENT">
+        <comment>产品回报内容</comment>
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <column id="217" parent="17" name="PRODUCT_RETURN_IMAGE_URL">
+        <comment>产品图片</comment>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="218" parent="17" name="DISTRIBUTION_AMOUNT">
+        <comment>配送金额(元)</comment>
+        <data-type>double(20,2)</data-type>
+      </column>
+      <column id="219" parent="17" name="SUPPORT_AMOUNT">
+        <comment>需要支持的金额(元,0:用户手动输入)</comment>
+        <data-type>double(20,2)</data-type>
+      </column>
+      <column id="220" parent="17" name="MAX_QUANTITY">
+        <comment>最大支持数量</comment>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="221" parent="17" name="SUPPORT_NUM">
+        <comment>已支持数量</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="222" parent="17" name="RETURN_DATE">
+        <comment>回报时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="223" parent="17" name="IS_PERSON_NAME">
+        <comment>是否需要联系人（Y/N）</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="224" parent="17" name="IS_CONTACT_NUMBER">
+        <comment>是否需要电话号码（Y/N）</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="225" parent="17" name="IS_EMAIL">
+        <comment>是否需要提供邮箱（Y/N）</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="226" parent="17" name="PROJECT_ID">
+        <comment>项目id</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="227" parent="17" name="USER_ID">
+        <comment>创建USER</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="228" parent="17" name="PRODUCT_RETURN_REMARK">
+        <comment>备注</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="229" parent="17" name="SEQ">
+        <comment>排序</comment>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="230" parent="17" name="CREATE_TIME">
+        <comment>创建时间</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="231" parent="17" name="PRIMARY">
+        <columns>PRODUCT_RETURN_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="232" parent="18" name="PROJECT_SOURSE_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="233" parent="18" name="PROJECT_ID">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="234" parent="18" name="PROJECT_FILE_URL">
+        <comment>项目相关资料文件</comment>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="235" parent="18" name="PROJECT_FILE_NAME">
+        <comment>资料文件名称</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="236" parent="18" name="PROJECT_FILE_SIZE">
+        <comment>文件大小</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="237" parent="18" name="CREATE_TIME">
+        <data-type>datetime</data-type>
+      </column>
+      <key id="238" parent="18" name="PRIMARY">
+        <columns>PROJECT_SOURSE_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="239" parent="19" name="PROJECT_AUDIT_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="240" parent="19" name="PROJECT_ID">
+        <comment>项目ID</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="241" parent="19" name="AUDIT_CONTENT">
+        <comment>审核内容</comment>
+        <data-type>varchar(10000)</data-type>
+      </column>
+      <column id="242" parent="19" name="AUDIT_REMARK">
+        <comment>审核备注</comment>
+        <data-type>varchar(2000)</data-type>
+      </column>
+      <column id="243" parent="19" name="AUDIT_RESULT">
+        <comment>审核结果</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="244" parent="19" name="AUDIT_SYS_USER">
+        <comment>审核人</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="245" parent="19" name="AUDIT_TIME">
+        <comment>审核时间</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="246" parent="19" name="PRIMARY">
+        <columns>PROJECT_AUDIT_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="247" parent="20" name="PROJECT_EVALUATE_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="248" parent="20" name="USER_ID">
+        <comment>用户ID</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="249" parent="20" name="PROJECT_ID">
+        <comment>项目ID</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="250" parent="20" name="CONTENT">
+        <comment>评价内容</comment>
+        <data-type>varchar(1000)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="251" parent="20" name="CREATE_TIME">
+        <comment>创建时间</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="252" parent="20" name="PRIMARY">
+        <columns>PROJECT_EVALUATE_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="253" parent="21" name="PROJECT_RECOMMEND_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="254" parent="21" name="PROJECT_ID">
+        <comment>项目ID</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="255" parent="21" name="START_DATE">
+        <data-type>date</data-type>
+      </column>
+      <column id="256" parent="21" name="END_DATE">
+        <data-type>date</data-type>
+      </column>
+      <column id="257" parent="21" name="SEQ">
+        <comment>排序</comment>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="258" parent="21" name="CREATE_USER">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="259" parent="21" name="CREATE_TIME">
+        <data-type>datetime</data-type>
+      </column>
+      <key id="260" parent="21" name="PRIMARY">
+        <columns>PROJECT_RECOMMEND_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="261" parent="22" name="ORDER_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="262" parent="22" name="ORDER_CODE">
+        <comment>编码</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="263" parent="22" name="PROJECT_ID">
+        <comment>项目编号</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="264" parent="22" name="USER_ID">
+        <comment>用户ID</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="265" parent="22" name="RETURN_ID">
+        <comment>回报id</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="266" parent="22" name="CHANNEL">
+        <comment>渠道：wechat,online,iphone,android</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="267" parent="22" name="PAYMENT_ID">
+        <comment>支付方式（1:微信）</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="268" parent="22" name="TRANSACTION_ID">
+        <comment>支付交易ID</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="269" parent="22" name="AMOUNT">
+        <comment>支持金额</comment>
+        <data-type>double(20,2)</data-type>
+      </column>
+      <column id="270" parent="22" name="QUANTITY">
+        <comment>支持数量</comment>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="271" parent="22" name="DELIVER_FEE">
+        <comment>配送费</comment>
+        <data-type>double(20,2)</data-type>
+      </column>
+      <column id="272" parent="22" name="TOTAL_AMOUNT">
+        <comment>总金额</comment>
+        <data-type>double(20,2)</data-type>
+      </column>
+      <column id="273" parent="22" name="ORDER_STATUS_ID">
+        <comment>订单状态</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="274" parent="22" name="PAY_STATUS_ID">
+        <comment>支付状态</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="275" parent="22" name="CONTACT_PERSON">
+        <comment>联系人</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="276" parent="22" name="CONTACT_NUMBER">
+        <comment>联系电话</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="277" parent="22" name="CONTACT_EMAIL">
+        <comment>邮箱</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="278" parent="22" name="GEO_CITY_ID">
+        <comment>所在城市ID</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="279" parent="22" name="DETAIL_ADDR">
+        <comment>详细地址</comment>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="280" parent="22" name="INPUT_ADDR">
+        <comment>填写的地址</comment>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="281" parent="22" name="ZIP_CODE">
+        <comment>邮政编码</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="282" parent="22" name="REMARK">
+        <comment>用户备注</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="283" parent="22" name="CREATE_TIME">
+        <comment>创建时间</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="284" parent="22" name="EXD_1">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="285" parent="22" name="EXD_2">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="286" parent="22" name="EXD_3">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="287" parent="22" name="EXD_4">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="288" parent="22" name="PRIMARY">
+        <columns>ORDER_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="289" parent="23" name="MSG_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="290" parent="23" name="USER_ID">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="291" parent="23" name="BUSINESS_TYPE">
+        <comment>业务类型(3008)</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="292" parent="23" name="MERCHANT_ID">
+        <comment>商户ID</comment>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="293" parent="23" name="MER_ORDER_NUM">
+        <comment>订单号</comment>
+        <data-type>varchar(24)</data-type>
+      </column>
+      <column id="294" parent="23" name="TRAN_DATE_TIME">
+        <comment>交易时间YYYYMMDDHHMMSS</comment>
+        <data-type>varchar(14)</data-type>
+      </column>
+      <column id="295" parent="23" name="PAN">
+        <comment>卡号</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="296" parent="23" name="CARD_KIND">
+        <comment>持卡人证件类别(01:身份证)</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="297" parent="23" name="CARD_ID">
+        <comment>持卡人证件号码</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="298" parent="23" name="CARD_NAME">
+        <comment>持卡人姓名</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="299" parent="23" name="PAYER_TEL">
+        <comment>持卡人手机号</comment>
+        <data-type>varchar(16)</data-type>
+      </column>
+      <column id="300" parent="23" name="TERMED">
+        <comment>终端号</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="301" parent="23" name="MSG_EXT">
+        <comment>附加信息</comment>
+        <data-type>varchar(1024)</data-type>
+      </column>
+      <column id="302" parent="23" name="MISC">
+        <comment>自定义保留域</comment>
+        <data-type>varchar(1024)</data-type>
+      </column>
+      <column id="303" parent="23" name="RESP_CODE">
+        <comment>响应码</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="304" parent="23" name="RESP_DESC">
+        <comment>响应码描述</comment>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="305" parent="23" name="RESP_JOSN_DATA">
+        <data-type>varchar(10000)</data-type>
+      </column>
+      <column id="306" parent="23" name="SETTLE_DATE">
+        <comment>清算日期</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="307" parent="23" name="CUPS_TRACE_NUM">
+        <comment>Cups交易流水号</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="308" parent="23" name="CUPS_SYS_TIME">
+        <comment>Cups交易时</comment>
+        <data-type>varchar(14)</data-type>
+      </column>
+      <key id="309" parent="23" name="PRIMARY">
+        <columns>MSG_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="310" parent="24" name="ROLL_IMAGE_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="311" parent="24" name="ROLL_IMAGE_NAME">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="312" parent="24" name="ROLL_IMAGE_VALUE">
+        <comment>跳转地址</comment>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="313" parent="24" name="ROLL_IMAGE_URL">
+        <comment>图片地址</comment>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="314" parent="24" name="ROLL_IMAGE_TYPE">
+        <comment>类型：1、PC 2、移动</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="315" parent="24" name="TARGET">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="316" parent="24" name="START_DATE">
+        <data-type>date</data-type>
+      </column>
+      <column id="317" parent="24" name="END_DATE">
+        <data-type>date</data-type>
+      </column>
+      <column id="318" parent="24" name="IS_ENABLED">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="319" parent="24" name="SEQ">
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="320" parent="24" name="CARATE_USER_ID">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="321" parent="24" name="CREATE_TIME">
+        <data-type>datetime</data-type>
+      </column>
+      <key id="322" parent="24" name="PRIMARY">
+        <columns>ROLL_IMAGE_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="323" parent="25" name="RECORD_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="324" parent="25" name="MOBILE_PHONE">
+        <comment>移动电话</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="325" parent="25" name="RECORD_TYPE">
+        <comment>类型:VERIFY_CODE(验证码)</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="326" parent="25" name="CONTENT">
+        <comment>内容</comment>
+        <data-type>varchar(2000)</data-type>
+      </column>
+      <column id="327" parent="25" name="IS_ENABLE">
+        <comment>是否启用</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="328" parent="25" name="REMARK">
+        <comment>备注</comment>
+        <data-type>varchar(2000)</data-type>
+      </column>
+      <column id="329" parent="25" name="CREATE_TIME">
+        <comment>创建时间</comment>
+        <data-type>bigint(14)</data-type>
+      </column>
+      <column id="330" parent="25" name="INVALID_TIME">
+        <comment>失效时间</comment>
+        <data-type>bigint(14)</data-type>
+      </column>
+      <key id="331" parent="25" name="PRIMARY">
+        <columns>RECORD_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="332" parent="26" name="STATUS_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="333" parent="26" name="STATUS_TYPE_ID">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="334" parent="26" name="STATUS_CODE">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="335" parent="26" name="STATUS_NAME">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="336" parent="26" name="DESCRIPTION">
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <column id="337" parent="26" name="IS_ENABLED">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <key id="338" parent="26" name="PRIMARY">
+        <columns>STATUS_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="339" parent="27" name="STATUS_TYPE_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="340" parent="27" name="STATUS_TYPE_NAME">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="341" parent="27" name="STATUS_TYPE_CODE">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="342" parent="27" name="DESCRIPTION">
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <column id="343" parent="27" name="IS_ENABLED">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <key id="344" parent="27" name="PRIMARY">
+        <columns>STATUS_TYPE_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="345" parent="28" name="SYS_CONFIG_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="346" parent="28" name="SYS_CONFIG_CODE">
+        <comment>编码</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="347" parent="28" name="SYS_CONFIG_NAME">
+        <comment>名称</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="348" parent="28" name="SYS_CONFIG_VALUE">
+        <comment>值</comment>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="349" parent="28" name="SYS_CONFIG_DESC">
+        <comment>描述</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="350" parent="28" name="SYS_CONFIG_TYPE">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="351" parent="28" name="IS_ENABLE">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <key id="352" parent="28" name="PRIMARY">
+        <columns>SYS_CONFIG_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="353" parent="29" name="FUNCTION_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="354" parent="29" name="PARE_FUNCTION">
+        <comment>父级菜单，若是顶级菜单则为Null</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="355" parent="29" name="FUNCTION_CODE">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="356" parent="29" name="FUNCTION_NAME">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="357" parent="29" name="START_DATE">
+        <data-type>date</data-type>
+      </column>
+      <column id="358" parent="29" name="STOP_DATE">
+        <data-type>date</data-type>
+      </column>
+      <column id="359" parent="29" name="IS_LEAF">
+        <comment>是否是子节点（Y \N）</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="360" parent="29" name="IS_ENABLED">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="361" parent="29" name="REMARK">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="362" parent="29" name="URL">
+        <data-type>varchar(500)</data-type>
+      </column>
+      <key id="363" parent="29" name="PRIMARY">
+        <columns>FUNCTION_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="364" parent="30" name="LOG_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="365" parent="30" name="LOG_TYPE_ID">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="366" parent="30" name="LOG_TYPE_MESSAGE">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="367" parent="30" name="FUNCTION_NAME">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="368" parent="30" name="FUNCTION_DESC">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="369" parent="30" name="MESSAGE">
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <column id="370" parent="30" name="ORDER_Code">
+        <comment>订单号</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="371" parent="30" name="DATA">
+        <data-type>text</data-type>
+      </column>
+      <column id="372" parent="30" name="LOG_TIME">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="373" parent="30" name="LOG_KEYWORD">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="374" parent="30" name="CALLER_IP">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="375" parent="30" name="REMARK">
+        <data-type>varchar(2000)</data-type>
+      </column>
+      <key id="376" parent="30" name="PRIMARY">
+        <columns>LOG_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="377" parent="31" name="ORG_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="378" parent="31" name="PARE_ORG_ID">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="379" parent="31" name="ORG_CODE">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="380" parent="31" name="ORG_NAME">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="381" parent="31" name="ORG_PATH">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="382" parent="31" name="IS_LEAF">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="383" parent="31" name="START_DATE">
+        <data-type>date</data-type>
+      </column>
+      <column id="384" parent="31" name="END_DATE">
+        <data-type>date</data-type>
+      </column>
+      <column id="385" parent="31" name="IS_ENABLED">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="386" parent="31" name="REMARK">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="387" parent="31" name="SEQ">
+        <data-type>bigint(20)</data-type>
+      </column>
+      <key id="388" parent="31" name="PRIMARY">
+        <columns>ORG_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="389" parent="32" name="ROLE_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="390" parent="32" name="ORG_ID">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="391" parent="32" name="ROLE_TYPE_ID">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="392" parent="32" name="ROLE_CODE">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="393" parent="32" name="ROLE_NAME">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="394" parent="32" name="REMARK">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="395" parent="32" name="IS_ENABLED">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <key id="396" parent="32" name="PRIMARY">
+        <columns>ROLE_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="397" parent="33" name="ROLE_FUNCTION_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="398" parent="33" name="ROLE_ID">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="399" parent="33" name="FUNCTION_ID">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <key id="400" parent="33" name="PRIMARY">
+        <columns>ROLE_FUNCTION_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="401" parent="34" name="ROLE_TYPE_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="402" parent="34" name="ROLE_TYPE_CODE">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="403" parent="34" name="ROLE_TYPE_NAME">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="404" parent="34" name="START_DATE">
+        <data-type>date</data-type>
+      </column>
+      <column id="405" parent="34" name="END_DATE">
+        <data-type>date</data-type>
+      </column>
+      <column id="406" parent="34" name="REMARK">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="407" parent="34" name="IS_ENABLED">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <key id="408" parent="34" name="PRIMARY">
+        <columns>ROLE_TYPE_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="409" parent="35" name="SYSTEM_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="410" parent="35" name="SYSTEM_CODE">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="411" parent="35" name="SYSTEM_NAME">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="412" parent="35" name="REMARK">
+        <comment>备注</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <key id="413" parent="35" name="PRIMARY">
+        <columns>SYSTEM_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="414" parent="36" name="SYS_USER_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="415" parent="36" name="SYS_USER_CODE">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="416" parent="36" name="SYS_USER_NAME">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="417" parent="36" name="SYS_ROLE_ID">
+        <comment>角色ID</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="418" parent="36" name="PASSWORD">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="419" parent="36" name="PHONE_NUMBER">
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="420" parent="36" name="EMAIL">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="421" parent="36" name="START_DATE">
+        <data-type>date</data-type>
+      </column>
+      <column id="422" parent="36" name="END_DATE">
+        <data-type>date</data-type>
+      </column>
+      <column id="423" parent="36" name="IS_ENABLED">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="424" parent="36" name="REMARK">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="425" parent="36" name="CARATE_USER_ID">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="426" parent="36" name="CREATE_TIME">
+        <data-type>datetime</data-type>
+      </column>
+      <key id="427" parent="36" name="PRIMARY">
+        <columns>SYS_USER_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="428" parent="37" name="USER_ROLE_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="429" parent="37" name="SYS_USER_ID">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="430" parent="37" name="ROLE_ID">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <key id="431" parent="37" name="PRIMARY">
+        <columns>USER_ROLE_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="432" parent="38" name="TRADING_ORDER_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="433" parent="38" name="TRADING_ORDER_CODE">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="434" parent="38" name="TRADING_ORDER_TYPE">
+        <comment> 类型(充值、支付)</comment>
+        <data-type>varchar(36)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="435" parent="38" name="AMOUNT">
+        <comment>金额（单位元）</comment>
+        <data-type>double(20,2)</data-type>
+      </column>
+      <column id="436" parent="38" name="USER_ID">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="437" parent="38" name="USER_CARD_ID">
+        <comment>用户卡ID</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="438" parent="38" name="PAYMENTS_ID">
+        <comment>支付方式</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="439" parent="38" name="CARD_NUM">
+        <comment>原银行卡卡号</comment>
+        <data-type>varchar(45)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="440" parent="38" name="ORDER_NUM">
+        <comment>交易订单号</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="441" parent="38" name="STATUS">
+        <comment>状态</comment>
+        <data-type>bigint(20) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="442" parent="38" name="CONTENT">
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <column id="443" parent="38" name="CREATE_TIME">
+        <comment>充值的时间</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="444" parent="38" name="PRIMARY">
+        <columns>TRADING_ORDER_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="445" parent="39" name="USER_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="446" parent="39" name="USER_CODE">
+        <comment>用户编码</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="447" parent="39" name="USER_NAME">
+        <comment>用户名</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="448" parent="39" name="USER_PHONE">
+        <comment>用户手机</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="449" parent="39" name="USER_EMAIL">
+        <comment>用户邮箱</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="450" parent="39" name="IS_CERTIFICATION">
+        <comment>是否实认证</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="451" parent="39" name="USER_SEX">
+        <comment>用户性别，0：女；1：男</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="452" parent="39" name="USER_IMAGE">
+        <comment>用户头像</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="453" parent="39" name="USER_CITY_ID">
+        <comment>所在城市，只显示城市CODE</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="454" parent="39" name="USER_BIOG_URL">
+        <comment>用户博客地址</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="455" parent="39" name="INTRODUCE">
+        <comment>自我介绍</comment>
+        <data-type>varchar(400)</data-type>
+      </column>
+      <column id="456" parent="39" name="LOGIN_PWD">
+        <comment>登录密码</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="457" parent="39" name="PAYMENT_PWD">
+        <comment>支付密码</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="458" parent="39" name="BIRTHDAY">
+        <comment>生日</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="459" parent="39" name="REMARK">
+        <comment>备注</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="460" parent="39" name="CREATE_TIME">
+        <comment>注册时间</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="461" parent="39" name="WECHAT_ID">
+        <comment>微信openID</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="462" parent="39" name="QQ_ID">
+        <comment>QQ关联ID</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="463" parent="39" name="SUPER_ID">
+        <comment>一登人脸登陆ID</comment>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="464" parent="39" name="SINA_ID">
+        <comment>新浪关联ID</comment>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <key id="465" parent="39" name="PRIMARY">
+        <columns>USER_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="466" parent="40" name="USER_ADDR_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="467" parent="40" name="USER_ID">
+        <comment>用户ID</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="468" parent="40" name="CONTACT_PERSON">
+        <comment>联系人</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="469" parent="40" name="CONTACT_NUMBER">
+        <comment>联系电话</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="470" parent="40" name="GEO_PROVINCE_ID">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="471" parent="40" name="GEO_CITY_ID">
+        <comment>所在城市ID</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="472" parent="40" name="DETAIL_ADDR">
+        <comment>详细地址</comment>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="473" parent="40" name="INPUT_ADDR">
+        <comment>填写的地址</comment>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="474" parent="40" name="EMAIL">
+        <comment>邮箱</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="475" parent="40" name="ZIP_CODE">
+        <comment>邮政编码</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="476" parent="40" name="REMARK">
+        <comment>备注</comment>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="477" parent="40" name="IS_DEFAULT">
+        <comment>默认地址</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="478" parent="40" name="IS_ENABLED">
+        <comment>是否启用(Y:启用;Nt停用)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="479" parent="40" name="CREATE_TIME">
+        <comment>创建时间</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="480" parent="40" name="PRIMARY">
+        <columns>USER_ADDR_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="481" parent="41" name="CARD_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="482" parent="41" name="CARD_CODE">
+        <comment>用户卡编码</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="483" parent="41" name="CARD_TYPE_ID">
+        <comment>用户卡类型ID</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="484" parent="41" name="USER_ID">
+        <comment>用户ID</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="485" parent="41" name="USER_CARD_NAME">
+        <comment>持卡人姓名</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="486" parent="41" name="USER_CARD_NUM">
+        <comment>卡号</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="487" parent="41" name="CARD_BALANCE">
+        <comment>余额</comment>
+        <data-type>double(20,2)</data-type>
+      </column>
+      <column id="488" parent="41" name="ID_CARD_NUM">
+        <comment>身份证号码</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="489" parent="41" name="OPEN_BANK_NAME">
+        <comment>开户行支行</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="490" parent="41" name="ACTIVE_DATE">
+        <comment>卡有效时间</comment>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="491" parent="41" name="IS_DEFAULT">
+        <comment>是否默认</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="492" parent="41" name="IS_ENABLED">
+        <comment>是否启用(Y:启用;Nt停用)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="493" parent="41" name="SEQ">
+        <comment>排序</comment>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="494" parent="41" name="CREATE_DATE">
+        <comment>创建时间</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="495" parent="41" name="PRIMARY">
+        <columns>CARD_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="496" parent="42" name="CARD_TYPE_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="497" parent="42" name="CARD_TYPE_CODE">
+        <comment>编码</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="498" parent="42" name="CARD_TYPE_NAME">
+        <comment>名称</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="499" parent="42" name="CARD_TYPE_CATEGORY">
+        <comment>类别，0：电子卡；1：借记卡；2：信用卡</comment>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="500" parent="42" name="CARD_TYPE_DESC">
+        <comment>描述</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="501" parent="42" name="IMAGE_URL">
+        <comment>图片路径</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="502" parent="42" name="IS_ENABLED">
+        <comment>是否启用(Y:启用;Nt停用)</comment>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="503" parent="42" name="SEQ">
+        <comment>排序</comment>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <key id="504" parent="42" name="PRIMARY">
+        <columns>CARD_TYPE_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="505" parent="43" name="CONCERN_PROJECT_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="506" parent="43" name="USER_ID">
+        <comment>用户ID</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="507" parent="43" name="PROJECT_ID">
+        <comment>项目ID</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="508" parent="43" name="CREATE_TIME">
+        <comment>关注时间</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="509" parent="43" name="PRIMARY">
+        <columns>CONCERN_PROJECT_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="510" parent="44" name="USER_PRIVATE_MESSAGE_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="511" parent="44" name="PARENT_ID">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="512" parent="44" name="PROJECT_ID">
+        <comment>项目ID</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="513" parent="44" name="MESSAGE_TYPE">
+        <comment>消息类型（用户；系统）</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="514" parent="44" name="RECEIVE_USER_ID">
+        <comment>就收用户</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="515" parent="44" name="SEND_USER_ID">
+        <comment>发送用户</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="516" parent="44" name="CONTENT">
+        <comment>私信内容</comment>
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <column id="517" parent="44" name="CREATE_TIME">
+        <comment>发送时间</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="518" parent="44" name="IS_DATELE">
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="519" parent="44" name="IS_LOOK">
+        <data-type>varchar(2)</data-type>
+      </column>
+      <key id="520" parent="44" name="PRIMARY">
+        <columns>USER_PRIVATE_MESSAGE_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="521" parent="45" name="USER_REAL_NAME_INFO_ID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="522" parent="45" name="USER_ID">
+        <comment>用户ID</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="523" parent="45" name="CARD_KIND">
+        <comment>持卡人证件类别(01:身份证)</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="524" parent="45" name="CARD_ID">
+        <comment>持卡人证件号码</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="525" parent="45" name="CARD_NAME">
+        <comment>持卡人姓名</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="526" parent="45" name="CARD_FRONT_URL">
+        <comment>身份证正面</comment>
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <column id="527" parent="45" name="CARD_BACK_URL">
+        <comment>身份证反面</comment>
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <column id="528" parent="45" name="PAYER_TEL">
+        <comment>持卡人手机号</comment>
+        <data-type>varchar(16)</data-type>
+      </column>
+      <column id="529" parent="45" name="PAN">
+        <comment>卡号</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="530" parent="45" name="RESP_CODE">
+        <comment>响应码</comment>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="531" parent="45" name="MER_ORDER_NUM">
+        <comment>订单号</comment>
+        <data-type>varchar(24)</data-type>
+      </column>
+      <column id="532" parent="45" name="MSG_ID">
+        <comment>纪录ID</comment>
+        <data-type>varchar(36)</data-type>
+      </column>
+      <key id="533" parent="45" name="PRIMARY">
+        <columns>USER_REAL_NAME_INFO_ID</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
