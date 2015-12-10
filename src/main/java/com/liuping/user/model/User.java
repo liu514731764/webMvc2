@@ -1,5 +1,6 @@
 package com.liuping.user.model;
 
+
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Id;

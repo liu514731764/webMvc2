@@ -35,6 +35,8 @@
     </bean>
 
 
+
+
     <!--首页配置-->
     <mvc:view-controller path="/" view-name="index"/>
 </beans>
